@@ -1,0 +1,150 @@
+:root {
+  /* background-color */
+  --background: hsl(0, 0%, 98%);
+
+  /* border-color */
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  /* text-color */
+  --main-color: hsl(229, 6%, 66%);
+  --title-color: hsl(234, 12%, 34%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background);
+  margin: 30px 150px;
+  color: var(--main-color);
+}
+
+p {
+  line-height: 1.6;
+  font-size: 0.9em;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+}
+
+h3 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+/* Text properties */
+.maintext {
+  text-align: center;
+}
+
+.maintext h2 {
+  font-weight: 200;
+  font-size: 2.2em;
+}
+
+.maintext h1 {
+  font-weight: 600;
+  font-size: 2.2em;
+}
+
+.maintext p {
+  padding: 15px 310px;
+  margin-bottom: 20px;
+}
+
+/* Blocks properties */
+.allblocks {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "block1 block2 block4"
+    "block1 block3 block4";
+}
+
+.block {
+  box-shadow: 0px 10px 20px var(--main-color);
+  border-radius: 5px;
+  padding: 25px;
+}
+
+.a {
+  grid-area: block1;
+  border-top: 5px solid var(--cyan);
+  height: 208px;
+  margin-top: 120px;
+}
+.b {
+  grid-area: block2;
+  border-top: 5px solid var(--red);
+}
+.c {
+  grid-area: block3;
+  border-top: 5px solid var(--orange);
+}
+.d {
+  grid-area: block4;
+  border-top: 5px solid var(--blue);
+  height: 208px;
+  margin-top: 120px;
+}
+
+.block img {
+  float: right;
+}
+
+/* Responsive */
+@media (min-width: 1440px) {
+  body {
+    margin: 40px 200px;
+  }
+}
+
+@media (max-width: 1360px) {
+  body {
+    margin: 30px;
+  }
+}
+
+@media (max-width: 980px) {
+  .maintext h2,
+  .maintext h1 {
+    font-size: 1.6em;
+  }
+
+  .maintext p {
+    padding: 25px 10px;
+  }
+
+  .allblocks {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .a {
+    margin: 0px;
+  }
+  .d {
+    margin: 0px;
+  }
+
+  .block {
+    padding: 20px;
+  }
+
+  .block p {
+    margin-bottom: 10px;
+  }
+}
