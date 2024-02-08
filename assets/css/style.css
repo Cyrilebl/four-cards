@@ -100,6 +100,10 @@ h3 {
   margin-top: 120px;
 }
 
+.block p {
+  margin-bottom: 15px;
+}
+
 .block img {
   float: right;
 }
